@@ -97,13 +97,10 @@ public abstract class Korisnik {
 		this.email = email;
 	}
 
-
-
-	@Override
-	public String toString() {
-		return "Osoba [id=" + id + ", ime=" + ime + ", prezime=" + prezime + ", datumRodjenja=" + datumRodjenja
-				+ ", email=" + email + "]";
+	public Korisnik() {
+		super();
 	}
+
 	
 	
 }

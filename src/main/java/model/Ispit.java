@@ -42,14 +42,6 @@ public class Ispit {
 		this.id = id;
 	}
 
-	public String getTipPolaganja() {
-		return tip;
-	}
-
-	public void setTipPolaganja(String tipPolaganja) {
-		this.tip = tipPolaganja;
-	}
-
 	public Student getStudent() {
 		return student;
 	}
@@ -98,6 +90,10 @@ public class Ispit {
 		this.pohadjanjePredmeta = pohadjanjePredmeta;
 		this.ocena = ocena;
 		this.bodovi = bodovi;
+	}
+
+	public Ispit() {
+		// TODO Auto-generated constructor stub
 	}
 	
 	

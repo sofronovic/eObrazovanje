@@ -111,6 +111,10 @@ public class Student extends Korisnik {
 		this.ispiti = ispiti;
 		this.studijskiProgram = studijskiProgram;
 	}
+
+	public Student() {
+		
+	}
 	
 }
 	
