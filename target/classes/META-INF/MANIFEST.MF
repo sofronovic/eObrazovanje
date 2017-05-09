@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: students
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: nsofr
+Built-By: wubon
 Implementation-Vendor-Id: tseo
 Build-Jdk: 1.8.0_101
 Created-By: Maven Integration for Eclipse
