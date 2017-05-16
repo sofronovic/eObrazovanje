@@ -62,6 +62,11 @@ public class Predavac extends Korisnik{
 		this.tipPredavaca = tipPredavaca;
 		this.listaPredmeta = listaPredmeta;
 	}
+
+	public Predavac(){
+		
+	}
+	
 	
 	
 	
