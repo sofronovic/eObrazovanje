@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 /META-INF/
 /controller/
 /model/
+=======
+/repository/
+/service/
+/META-INF/
+>>>>>>> feature/Issues1
