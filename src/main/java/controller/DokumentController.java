@@ -19,7 +19,7 @@ import service.DokumentService;
 import service.StudentService;
 
 @RestController
-@RequestMapping(value = "documents/all")
+@RequestMapping(value = "api/dokumenti")
 public class DokumentController {
 	
 	@Autowired

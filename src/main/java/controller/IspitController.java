@@ -23,7 +23,7 @@ import service.PohadjanjePredmetaService;
 import service.StudentService;
 
 @RestController
-@RequestMapping(value = "exams/all")
+@RequestMapping(value = "api/ispiti")
 public class IspitController {
 	
 	@Autowired

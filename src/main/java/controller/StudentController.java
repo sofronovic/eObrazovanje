@@ -19,7 +19,7 @@ import model.Student;
 import service.StudentService;
 
 @RestController
-@RequestMapping(value="api/students")
+@RequestMapping(value="api/studenti")
 public class StudentController {
 
 	@Autowired
