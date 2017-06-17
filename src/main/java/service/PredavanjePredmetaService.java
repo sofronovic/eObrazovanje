@@ -16,7 +16,6 @@ public class PredavanjePredmetaService {
 	@Autowired
 	PredavanjePredmetaRepository predavanjePredmetaRepository;
 	
-	
 	public List<PredavanjePredmeta> findAll(){
 		return predavanjePredmetaRepository.findAll();
 	}

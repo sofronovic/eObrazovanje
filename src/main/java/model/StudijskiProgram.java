@@ -81,5 +81,5 @@ public class StudijskiProgram {
 	}
 
 	
-	
+	public StudijskiProgram() {}
 }

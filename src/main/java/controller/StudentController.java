@@ -19,13 +19,15 @@ import model.Student;
 import service.StudentService;
 
 @RestController
-@RequestMapping(value="api/students")
+@RequestMapping(value="api/studenti")
 public class StudentController {
 
 	@Autowired
 	private StudentService studentService;
 	
-	@RequestMapping(value="/all", method = RequestMethod.GET)
+	//StudijskiProgramService
+	
+	@RequestMapping()
 	public ResponseEntity<List<Student>> getAllStudents() {
 		List<Student> students = studentService.findAll();
 		

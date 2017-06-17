@@ -21,6 +21,7 @@ public class PredavanjePredmetaDTO {
 		this.id = id;
 		this.predavac = predavac;
 		this.predmet = predmet;
+    
 	}
 
 	public long getId() {
@@ -38,7 +39,6 @@ public class PredavanjePredmetaDTO {
 	public void setPredavac(PredavacDTO predavac) {
 		this.predavac = predavac;
 	}
-
 	public PredmetDTO getPredmet() {
 		return predmet;
 	}
@@ -47,8 +47,5 @@ public class PredavanjePredmetaDTO {
 		this.predmet = predmet;
 	}
 	
-	
-	
-	
-	
+
 }

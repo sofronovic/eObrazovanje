@@ -80,6 +80,6 @@ public class Uplata {
 		this.student = student;
 	}
 
-	
+	public Uplata(){}
 	
 }

@@ -55,6 +55,6 @@ public class TipPredavaca {
 		this.listaPredavaca = listaPredavaca;
 	}
 	
-	
+	public TipPredavaca() {}
 	
 }
