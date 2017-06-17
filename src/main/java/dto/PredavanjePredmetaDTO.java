@@ -3,25 +3,25 @@ package dto;
 import model.PredavanjePredmeta;
 
 public class PredavanjePredmetaDTO {
-
+	
 	private long id;
-	//private PredavacDTO predavac;
+	private PredavacDTO predavac;
 	private PredmetDTO predmet;
 	
-	public PredavanjePredmetaDTO(PredavanjePredmeta p)
-	{
-		id = p.getId();
-		//predavac = new PredavacDTO(p.getPredavac());
-		predmet = new PredmetDTO(p.getPredmet());
-	}
-	
 	public PredavanjePredmetaDTO(){}
+	
+	public PredavanjePredmetaDTO(PredavanjePredmeta pp){
+		id = pp.getId();
+		predavac = new PredavacDTO(pp.getPredavac());
+		predmet = new PredmetDTO(pp.getPredmet());
+	}
 
-	public PredavanjePredmetaDTO(long id, PredmetDTO predmet) {
+	public PredavanjePredmetaDTO(long id, PredavacDTO predavac, PredmetDTO predmet) {
 		super();
 		this.id = id;
+		this.predavac = predavac;
 		this.predmet = predmet;
-		//this.predavac = predavac;
+    
 	}
 
 	public long getId() {
@@ -32,6 +32,13 @@ public class PredavanjePredmetaDTO {
 		this.id = id;
 	}
 
+	public PredavacDTO getPredavac() {
+		return predavac;
+	}
+
+	public void setPredavac(PredavacDTO predavac) {
+		this.predavac = predavac;
+	}
 	public PredmetDTO getPredmet() {
 		return predmet;
 	}
@@ -40,6 +47,5 @@ public class PredavanjePredmetaDTO {
 		this.predmet = predmet;
 	}
 	
-	
-	
+
 }

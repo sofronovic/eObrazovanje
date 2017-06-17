@@ -53,5 +53,6 @@ public class PredavanjePredmeta {
 		this.predavac = predavac;
 		this.predmet = predmet;
 	}
+	public PredavanjePredmeta(){}
 
 }
