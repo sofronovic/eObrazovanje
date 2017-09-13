@@ -55,25 +55,16 @@ public class StudentController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, consumes="application/json")
-	public ResponseEntity<StudentDTO> saveStudent(@RequestBody StudentDTO student){
-		System.out.println("student" + student);
-		Student s = new Student();
+	public ResponseEntity<Student> saveStudent(@RequestBody Student student){
+
+		System.out.println("Student: " + student  + " Username :" + student.getUserName());
+		student = studentService.save(student);
 		
-		s.setIme(student.getIme());
-		s.setPrezime(student.getPrezime());
-		s.setUserName(student.getUsername());
-		s.setPassword(student.getPassword());
-		s.setEmail(student.getEmail());
-		s.setIndeks(student.getIndeks());
-		
-		s = studentService.save(s);
-		
-		return new ResponseEntity<>(new StudentDTO(s), HttpStatus.CREATED);
+		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT, consumes="application/json")
 	public ResponseEntity<Student> updateStudent(@RequestBody Student s){
-		//a student must exist
 		Student student = studentService.findOne(s.getId()); 
 		if (student == null) {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);

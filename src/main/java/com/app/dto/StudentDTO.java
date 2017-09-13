@@ -8,7 +8,7 @@ public class StudentDTO {
 	
 	private long id;
 	private String indeks;
-	private String username;
+	private String userName;
 	private String password;
 	private String ime;
 	private String prezime;
@@ -18,7 +18,7 @@ public class StudentDTO {
 		super();
 		this.id = student.getId();
 		this.indeks = student.getIndeks();
-		this.username = student.getEmail();
+		this.userName = student.getUserName();
 		this.password = student.getPassword();
 		this.ime = student.getIme();
 		this.prezime = student.getPrezime();
@@ -46,12 +46,12 @@ public class StudentDTO {
 		this.indeks = indeks;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassword() {
@@ -86,7 +86,13 @@ public class StudentDTO {
 		this.email = email;
 	}
 
+	@Override
+	public String toString() {
+		return "StudentDTO [id=" + id + ", indeks=" + indeks + ", userName=" + userName + ", password=" + password
+				+ ", ime=" + ime + ", prezime=" + prezime + ", email=" + email + "]";
+	}
 
+	
 	
 
 }
