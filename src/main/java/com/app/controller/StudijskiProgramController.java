@@ -24,7 +24,7 @@ public class StudijskiProgramController {
 	@Autowired
 	private StudijskiProgramService studijskiProgramService;
 	
-	@RequestMapping(value="/all", method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<List<StudijskiProgram>> getAllStudijskiProgrami(){
 		List<StudijskiProgram> studijskiProgrami = studijskiProgramService.findAll();
 		
@@ -52,8 +52,7 @@ public class StudijskiProgramController {
 	
 	@RequestMapping(method=RequestMethod.POST, consumes="application/json")
 	public ResponseEntity<StudijskiProgram> saveStudijskiProgram(@RequestBody StudijskiProgram studijskiProgram){
-		StudijskiProgram s = new StudijskiProgram();
-		s = studijskiProgramService.save(s);
+		studijskiProgram = studijskiProgramService.save(studijskiProgram);
 		
 		return new ResponseEntity<>(studijskiProgram, HttpStatus.CREATED);
 	}

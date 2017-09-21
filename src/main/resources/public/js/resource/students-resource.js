@@ -13,7 +13,7 @@ angular.module('studentServiceApp')
 			};
 
 			returnValue.saveStudent = function(student){
-				return Restangular.all('studenti').post(student)
+				return Restangular.all("studenti").post(student)
 					.then(function (data){
 						students.push(data);
 					});

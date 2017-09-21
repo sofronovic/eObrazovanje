@@ -60,7 +60,7 @@ public class StudentController {
 		System.out.println("Student: " + student  + " Username :" + student.getUserName());
 		student = studentService.save(student);
 		
-		return new ResponseEntity<>(HttpStatus.CREATED);
+		return new ResponseEntity<>(student, HttpStatus.CREATED);
 	}
 	
 	@RequestMapping(method=RequestMethod.PUT, consumes="application/json")
