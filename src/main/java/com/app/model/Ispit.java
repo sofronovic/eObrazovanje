@@ -29,7 +29,7 @@ public class Ispit {
 	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
 	//@JoinColumn(name = "pohadjanjePredmeta_id", referencedColumnName = "pohadjanjePredmeta_id")
 	@JsonIgnore
-	private PohadjanjePredmeta pohadjanjePredmeta;
+	private Pohadjanje pohadjanjePredmeta;
 	
 	@Column
 	private int ocena;
@@ -54,11 +54,11 @@ public class Ispit {
 		this.student = student;
 	}
 
-	public PohadjanjePredmeta getPohadjanjePredmeta() {
+	public Pohadjanje getPohadjanjePredmeta() {
 		return pohadjanjePredmeta;
 	}
 
-	public void setPohadjanjePredmeta(PohadjanjePredmeta pohadjanjePredmeta) {
+	public void setPohadjanjePredmeta(Pohadjanje pohadjanjePredmeta) {
 		this.pohadjanjePredmeta = pohadjanjePredmeta;
 	}
 
@@ -86,7 +86,7 @@ public class Ispit {
 		this.tip = tip;
 	}
 
-	public Ispit(long id, String tip, Student student, PohadjanjePredmeta pohadjanjePredmeta, int ocena, float bodovi) {
+	public Ispit(long id, String tip, Student student, Pohadjanje pohadjanjePredmeta, int ocena, float bodovi) {
 		super();
 		this.id = id;
 		this.tip = tip;

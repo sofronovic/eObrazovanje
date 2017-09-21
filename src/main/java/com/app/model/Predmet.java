@@ -9,7 +9,10 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Predmet {
@@ -26,9 +29,10 @@ public class Predmet {
 	
 	@Column
 	private int ECTS;
-	
-	@OneToMany(mappedBy = "predmet", fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
-	private List<PohadjanjePredmeta> pohadjanjePredmeta = new ArrayList<PohadjanjePredmeta>();
+
+	@ManyToOne
+	@JsonIgnore
+	private StudijskiProgram studijskiProgram;
 	
 	@OneToMany(mappedBy = "predmet", fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
 	private List<PredavanjePredmeta> predavanjePredmeta = new ArrayList<PredavanjePredmeta>();;
@@ -57,27 +61,31 @@ public class Predmet {
 	public void setECTS(int eCTS) {
 		ECTS = eCTS;
 	}
-	public List<PohadjanjePredmeta> getPohadjanjePredmeta() {
-		return pohadjanjePredmeta;
-	}
-	public void setPohadjanjePredmeta(List<PohadjanjePredmeta> pohadjanjePredmeta) {
-		this.pohadjanjePredmeta = pohadjanjePredmeta;
-	}
+
 	public List<PredavanjePredmeta> getPredavanjePredmeta() {
 		return predavanjePredmeta;
 	}
 	public void setPredavanjePredmeta(List<PredavanjePredmeta> predavanjePredmeta) {
 		this.predavanjePredmeta = predavanjePredmeta;
 	}
-	public Predmet(long id, String oznaka, String naziv, int eCTS, List<PohadjanjePredmeta> pohadjanjePredmeta,
-			List<PredavanjePredmeta> predavanjePredmeta) {
+	
+	
+	
+	public StudijskiProgram getStudijskiProgram() {
+		return studijskiProgram;
+	}
+	public void setStudijskiProgram(StudijskiProgram studijskiProgram) {
+		this.studijskiProgram = studijskiProgram;
+	}
+	public Predmet(long id, String oznaka, String naziv, int eCTS, List<Pohadjanje> pohadjanjePredmeta,
+			List<PredavanjePredmeta> predavanjePredmeta, StudijskiProgram studijskiProgram) {
 		super();
 		this.id = id;
 		this.oznaka = oznaka;
 		this.naziv = naziv;
 		this.ECTS = eCTS;
-		this.pohadjanjePredmeta = pohadjanjePredmeta;
 		this.predavanjePredmeta = predavanjePredmeta;
+		this.studijskiProgram = studijskiProgram;
 	}
 	
 	

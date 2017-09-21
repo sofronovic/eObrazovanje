@@ -9,7 +9,7 @@ public class IspitDTO {
 	private int ocena;
 	private float bodovi;
 	private StudentDTO student;
-	private PohadjanjePredmetaDTO pohadjanjePredmeta;
+	private PohadjanjeDTO pohadjanjePredmeta;
 	
 	public IspitDTO(){}
 	
@@ -19,7 +19,7 @@ public class IspitDTO {
 		ocena = ispit.getOcena();
 		bodovi = ispit.getBodovi();
 		student = new StudentDTO(ispit.getStudent());
-		pohadjanjePredmeta = new PohadjanjePredmetaDTO(ispit.getPohadjanjePredmeta());
+		pohadjanjePredmeta = new PohadjanjeDTO(ispit.getPohadjanjePredmeta());
 		
 	}
 	
@@ -71,11 +71,11 @@ public class IspitDTO {
 		this.student = student;
 	}
 
-	public PohadjanjePredmetaDTO getPohadjanjePredmeta() {
+	public PohadjanjeDTO getPohadjanjePredmeta() {
 		return pohadjanjePredmeta;
 	}
 
-	public void setPohadjanjePredmeta(PohadjanjePredmetaDTO pohadjanjePredmeta) {
+	public void setPohadjanjePredmeta(PohadjanjeDTO pohadjanjePredmeta) {
 		this.pohadjanjePredmeta = pohadjanjePredmeta;
 	}
 	

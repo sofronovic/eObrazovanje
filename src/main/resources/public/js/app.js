@@ -1,7 +1,6 @@
 angular.
 	module('studentServiceApp', 
-	['ngRoute', 'ngResource', 'restangular', 'ui.bootstrap',
-	 'lodash'])
+	['ngRoute', 'ngResource', 'restangular', 'ui.bootstrap', 'lodash'])
 	.config(['$routeProvider', function($routeProvider) {
 		$routeProvider
 			.when('/', {
@@ -14,6 +13,10 @@ angular.
 			.when('/students', {
 				templateUrl: 'views/students.html',
 				controller: 'students-ctrl'
+			})
+			.when('/courses', {
+				templateUrl: 'views/courses.html',
+				controller: 'course-ctrl'
 			})			
 			.otherwise({
 				redirectTo: '/students'

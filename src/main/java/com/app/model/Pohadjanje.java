@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-public class PohadjanjePredmeta {
+public class Pohadjanje {
 	
 	@Id
 	@GeneratedValue
@@ -23,11 +23,15 @@ public class PohadjanjePredmeta {
 	@JsonIgnore
 	private Student student;
 	
-
-	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
+/*	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
 	//@JoinColumn(name = "predmet_id", referencedColumnName = "predmet_id")
 	@JsonIgnore
-	private Predmet predmet;
+	private Predmet predmet;*/
+	
+	@ManyToOne
+	@JsonIgnore
+	private StudijskiProgram studijskiProgram;
+	
 
 	public long getId() {
 		return id;
@@ -44,20 +48,22 @@ public class PohadjanjePredmeta {
 	public void setStudent(Student student) {
 		this.student = student;
 	}
+	
+	
 
-	public Predmet getPredmet() {
-		return predmet;
+	public StudijskiProgram getStudijskiProgram() {
+		return studijskiProgram;
 	}
 
-	public void setPredmet(Predmet predmet) {
-		this.predmet = predmet;
+	public void setStudijskiProgram(StudijskiProgram studijskiProgram) {
+		this.studijskiProgram = studijskiProgram;
 	}
 
-	public PohadjanjePredmeta(long id, Student student, Predmet predmet) {
+	public Pohadjanje(long id, Student student, StudijskiProgram studijskiProgram) {
 		super();
 		this.id = id;
 		this.student = student;
-		this.predmet = predmet;
+		this.studijskiProgram = studijskiProgram;
 	}
 	
 	

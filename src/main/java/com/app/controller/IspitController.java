@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.app.dto.IspitDTO;
 import com.app.model.Ispit;
-import com.app.model.PohadjanjePredmeta;
+import com.app.model.Pohadjanje;
 import com.app.model.Student;
 import com.app.service.IspitService;
 import com.app.service.PohadjanjePredmetaService;
@@ -64,7 +64,7 @@ public class IspitController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 		Student student = studentService.findOne(ispitDTO.getStudent().getId());
-		PohadjanjePredmeta pohadjanjePredmeta = pohadjanjePService.findOne(ispitDTO.getPohadjanjePredmeta().getId());
+		Pohadjanje pohadjanjePredmeta = pohadjanjePService.findOne(ispitDTO.getPohadjanjePredmeta().getId());
 
 		if (student == null || pohadjanjePredmeta == null){
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);

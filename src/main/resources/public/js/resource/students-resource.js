@@ -1,6 +1,6 @@
 angular.module('studentServiceApp')
-	.factory('StudentResource', ['Restangular', '_', '$log',
-		function(Restangular, _, $log){
+	.factory('StudentResource', ['Restangular', '_', 
+		function(Restangular, _){
 	
 			var students = [];
 			var returnValue = {};
@@ -25,7 +25,7 @@ angular.module('studentServiceApp')
 						id: id
 					});
 				});
-			};
+			};	
 
 		return returnValue;
 	}]);

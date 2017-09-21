@@ -31,7 +31,7 @@ public class StudijskiProgramController {
 		return new ResponseEntity<>(studijskiProgrami, HttpStatus.OK);
 	}
 	
-	@RequestMapping(method = RequestMethod.GET)
+/*	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<List<StudijskiProgram>> getStudijskiProgramiPage(Pageable page){
 		Page<StudijskiProgram> pageStudijskiProgrami = studijskiProgramService.findAll(page);
 		List<StudijskiProgram> studijskiProggrami = new ArrayList<>();
@@ -39,7 +39,7 @@ public class StudijskiProgramController {
 			studijskiProggrami.add(s);
 		}
 		return new ResponseEntity<>(studijskiProggrami, HttpStatus.OK);
-	}
+	}*/
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public ResponseEntity<StudijskiProgram> getStudijskiProgram(@PathVariable Long id){

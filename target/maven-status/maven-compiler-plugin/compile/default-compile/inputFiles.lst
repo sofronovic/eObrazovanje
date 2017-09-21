@@ -11,6 +11,7 @@ C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\controller\TipPredavacaCo
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\repository\StudijskiProgramRepository.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\service\PohadjanjePredmetaService.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\controller\UplataController.java
+C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\dto\PohadjanjeDTO.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\controller\IspitController.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\repository\PredavacRepository.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\service\UplataService.java
@@ -24,6 +25,7 @@ C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\security\TokenUtils.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\dto\DokumentDTO.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\model\Dokument.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\dto\RacunDTO.java
+C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\model\Pohadjanje.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\service\StudentService.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\controller\StudentController.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\dto\StudijskiProgramDTO.java
@@ -35,7 +37,6 @@ C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\dto\TipPredavacaDTO.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\service\DokumentService.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\model\Student.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\repository\RacunRepository.java
-C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\model\PohadjanjePredmeta.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\model\Korisnik.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\model\StudijskiProgram.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\dto\PredavacDTO.java
@@ -44,7 +45,6 @@ C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\model\PredavanjePredmeta.
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\repository\PohadanjePredmetaRepository.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\model\Racun.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\controller\DokumentController.java
-C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\dto\PohadjanjePredmetaDTO.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\model\Uplata.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\repository\TipPredavacaRepository.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\repository\DokumentRepository.java

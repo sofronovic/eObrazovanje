@@ -27,8 +27,14 @@ public class StudijskiProgram {
 	@Column
 	private String tipKursa;
 	
-	@OneToMany(mappedBy = "studijskiProgram", fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
+/*	@OneToMany(mappedBy = "studijskiProgram", fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
 	private List<Student> listaStudenata = new ArrayList<Student>();
+	*/
+	@OneToMany(mappedBy = "studijskiProgram", fetch = FetchType.LAZY, cascade= CascadeType.REFRESH)
+	private List<Predmet> listaPredmeta = new ArrayList<Predmet>();
+	
+	@OneToMany(mappedBy = "studijskiProgram", fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
+	private List<Pohadjanje> pohadjanja = new ArrayList<Pohadjanje>();
 
 	public long getId() {
 		return id;
@@ -62,24 +68,46 @@ public class StudijskiProgram {
 	public void setTipKursa(String tipKursa) {
 		this.tipKursa = tipKursa;
 	}
+	
+	
 
-	public List<Student> getListaStudenata() {
+/*	public List<Student> getListaStudenata() {
 		return listaStudenata;
 	}
 
 	public void setListaStudenata(List<Student> listaStudenata) {
 		this.listaStudenata = listaStudenata;
+	}*/
+	
+	
+
+	public List<Predmet> getListaPredmeta() {
+		return listaPredmeta;
 	}
 
-	public StudijskiProgram(long id, String naziv, int trajanje, String tipKursa, List<Student> listaStudenata) {
+	public void setListaPredmeta(List<Predmet> listaPredmeta) {
+		this.listaPredmeta = listaPredmeta;
+	}
+
+	public StudijskiProgram(long id, String naziv, int trajanje, 
+			String tipKursa, List<Pohadjanje> pohadjanja, List<Predmet> listaPredmeta) {
 		super();
 		this.id = id;
 		this.naziv = naziv;
 		this.trajanje = trajanje;
 		this.tipKursa = tipKursa;
-		this.listaStudenata = listaStudenata;
+		this.pohadjanja = pohadjanja;
+		this.listaPredmeta = listaPredmeta;
 	}
 
 	
+	public List<Pohadjanje> getPohadjanja() {
+		return pohadjanja;
+	}
+
+	public void setPohadjanja(List<Pohadjanje> pohadjanja) {
+		this.pohadjanja = pohadjanja;
+	}
+
 	public StudijskiProgram() {}
 }

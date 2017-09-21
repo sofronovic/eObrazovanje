@@ -2,8 +2,8 @@ package com.app.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.app.model.PohadjanjePredmeta;
+import com.app.model.Pohadjanje;
 
-public interface PohadanjePredmetaRepository extends JpaRepository<PohadjanjePredmeta, Long> {
+public interface PohadanjePredmetaRepository extends JpaRepository<Pohadjanje, Long> {
 
 }

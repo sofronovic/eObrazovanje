@@ -8,7 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.app.model.PohadjanjePredmeta;
+import com.app.model.Pohadjanje;
 import com.app.repository.PohadanjePredmetaRepository;
 
 @Service
@@ -17,20 +17,20 @@ public class PohadjanjePredmetaService {
 	@Autowired
 	PohadanjePredmetaRepository pohadanjePRepository;
 	
-	public PohadjanjePredmeta findOne(Long id){
+	public Pohadjanje findOne(Long id){
 		return pohadanjePRepository.findOne(id);
 	}
 	
-	public List<PohadjanjePredmeta> findAll(){
+	public List<Pohadjanje> findAll(){
 		return pohadanjePRepository.findAll();
 	}
 	
-	public Page<PohadjanjePredmeta> findAll(Pageable page){
+	public Page<Pohadjanje> findAll(Pageable page){
 		return pohadanjePRepository.findAll(page);
 	}
 	
 	
-	public PohadjanjePredmeta save(PohadjanjePredmeta student){
+	public Pohadjanje save(Pohadjanje student){
 		return pohadanjePRepository.save(student);
 	}
 	

@@ -38,15 +38,11 @@ public class Student extends Korisnik {
 	private List<Uplata> uplate = new ArrayList<Uplata>();
 	
 	@OneToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
-	private List<PohadjanjePredmeta> predmeti = new ArrayList<PohadjanjePredmeta>();
+	private List<Pohadjanje> pohadjanja = new ArrayList<Pohadjanje>(); 
 
 	@OneToMany(mappedBy = "student", fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
 	private List<Ispit> ispiti =  new ArrayList<Ispit>();
-	
-	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
-	@JsonIgnore
-	private StudijskiProgram studijskiProgram;
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -79,12 +75,12 @@ public class Student extends Korisnik {
 		this.uplate = uplate;
 	}
 
-	public List<PohadjanjePredmeta> getPredmeti() {
-		return predmeti;
+	public List<Pohadjanje> getPohadjanja() {
+		return pohadjanja;
 	}
 
-	public void setPredmeti(List<PohadjanjePredmeta> predmeti) {
-		this.predmeti = predmeti;
+	public void setPredmeti(List<Pohadjanje> pohadjanja) {
+		this.pohadjanja = pohadjanja;
 	}
 
 	public List<Ispit> getIspiti() {
@@ -93,14 +89,6 @@ public class Student extends Korisnik {
 
 	public void setIspiti(List<Ispit> ispiti) {
 		this.ispiti = ispiti;
-	}
-
-	public StudijskiProgram getStudijskiProgram() {
-		return studijskiProgram;
-	}
-
-	public void setStudijskiProgram(StudijskiProgram studijskiProgram) {
-		this.studijskiProgram = studijskiProgram;
 	}
 
 	
@@ -117,7 +105,7 @@ public class Student extends Korisnik {
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", indeks=" + indeks + ", dokumenta=" + dokumenta + ", uplate=" + uplate
-				+ ", predmeti=" + predmeti + ", ispiti=" + ispiti + ", studijskiProgram=" + studijskiProgram + "]";
+				+ ", pohadjanja=" + pohadjanja + ", ispiti=" + ispiti +  "]";
 	}
 	
 	
