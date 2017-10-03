@@ -28,7 +28,7 @@ public class Predmet {
 	private String naziv;
 	
 	@Column
-	private int ECTS;
+	private int ects;
 
 	@ManyToOne
 	@JsonIgnore
@@ -56,10 +56,10 @@ public class Predmet {
 		this.naziv = naziv;
 	}
 	public int getECTS() {
-		return ECTS;
+		return ects;
 	}
-	public void setECTS(int eCTS) {
-		ECTS = eCTS;
+	public void setECTS(int ECTS) {
+		this.ects = ECTS;
 	}
 
 	public List<PredavanjePredmeta> getPredavanjePredmeta() {
@@ -77,17 +77,33 @@ public class Predmet {
 	public void setStudijskiProgram(StudijskiProgram studijskiProgram) {
 		this.studijskiProgram = studijskiProgram;
 	}
-	public Predmet(long id, String oznaka, String naziv, int eCTS, List<Pohadjanje> pohadjanjePredmeta,
+	public Predmet(long id, String oznaka, String naziv, int ECTS, List<Pohadjanje> pohadjanjePredmeta,
 			List<PredavanjePredmeta> predavanjePredmeta, StudijskiProgram studijskiProgram) {
 		super();
 		this.id = id;
 		this.oznaka = oznaka;
 		this.naziv = naziv;
-		this.ECTS = eCTS;
+		this.ects = ECTS;
 		this.predavanjePredmeta = predavanjePredmeta;
 		this.studijskiProgram = studijskiProgram;
 	}
+	public Predmet(long id, String oznaka, String naziv, int ECTS, StudijskiProgram studijskiProgram,
+			List<PredavanjePredmeta> predavanjePredmeta) {
+		super();
+		this.id = id;
+		this.oznaka = oznaka;
+		this.naziv = naziv;
+		this.ects = ECTS;
+		this.studijskiProgram = studijskiProgram;
+		this.predavanjePredmeta = predavanjePredmeta;
+	}
+	
+	public Predmet(){}
+	@Override
+	public String toString() {
+		return "Predmet [id=" + id + ", oznaka=" + oznaka + ", naziv=" + naziv + ", ECTS=" + ects
+				+ ", studijskiProgram=" + studijskiProgram + ", predavanjePredmeta=" + predavanjePredmeta + "]";
+	}
 	
 	
-
 }

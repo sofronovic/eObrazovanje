@@ -24,6 +24,7 @@ C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\security\SecurityConfigur
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\security\TokenUtils.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\dto\DokumentDTO.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\model\Dokument.java
+C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\repository\PredmetRepository.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\dto\RacunDTO.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\model\Pohadjanje.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\service\StudentService.java
@@ -35,10 +36,12 @@ C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\service\PredavanjePredmet
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\repository\UplataRepository.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\dto\TipPredavacaDTO.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\service\DokumentService.java
+C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\controller\PredmetController.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\model\Student.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\repository\RacunRepository.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\model\Korisnik.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\model\StudijskiProgram.java
+C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\service\PredmetService.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\dto\PredavacDTO.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\dto\PredmetDTO.java
 C:\Users\nikola\git\eObrazovanje\src\main\java\com\app\model\PredavanjePredmeta.java

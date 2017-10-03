@@ -5,7 +5,7 @@ import com.app.model.StudijskiProgram;
 
 public class StudijskiProgramDTO {
 
-	private long id;
+	private Long id;
 	private String naziv;
 	private int trajanje;
 	private String tipKursa;
@@ -19,7 +19,7 @@ public class StudijskiProgramDTO {
 
 	public StudijskiProgramDTO(){}
 
-	public StudijskiProgramDTO(long id, String naziv, int trajanje, String tipKursa) {
+	public StudijskiProgramDTO(Long id, String naziv, int trajanje, String tipKursa) {
 		super();
 		this.id = id;
 		this.naziv = naziv;
@@ -27,11 +27,11 @@ public class StudijskiProgramDTO {
 		this.tipKursa = tipKursa;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

@@ -4,36 +4,36 @@ import com.app.model.Predmet;
 
 public class PredmetDTO {
 	
-	private long id;
+	private Long id;
 	private String oznaka;
 	private String naziv;
-	private int ECTS;
+	private int ects;
 	private StudijskiProgramDTO studijskiProgram;
 	
 	public PredmetDTO(Predmet predmet){
 		id = predmet.getId();
 		oznaka = predmet.getOznaka();
 		naziv = predmet.getNaziv();
-		ECTS = predmet.getECTS();
+		ects = predmet.getECTS();
 		studijskiProgram = new StudijskiProgramDTO(predmet.getStudijskiProgram());
 	}
 	
 	public PredmetDTO(){}
 	
-	public PredmetDTO(long id, String oznaka, String naziv, int ECTS, StudijskiProgramDTO studijskiProgram) {
+	public PredmetDTO(Long id, String oznaka, String naziv, int ECTS, StudijskiProgramDTO studijskiProgram) {
 		super();
 		this.id = id;
 		this.oznaka = oznaka;
 		this.naziv = naziv;
-		this.ECTS = ECTS;
+		this.ects = ECTS;
 		this.studijskiProgram = studijskiProgram;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -54,11 +54,11 @@ public class PredmetDTO {
 	}
 
 	public int getECTS() {
-		return ECTS;
+		return ects;
 	}
 
-	public void setECTS(int eCTS) {
-		ECTS = eCTS;
+	public void setECTS(int ECTS) {
+		this.ects = ECTS;
 	}
 
 	public StudijskiProgramDTO getStudijskiProgram() {

@@ -17,9 +17,13 @@ angular.
 			.when('/courses', {
 				templateUrl: 'views/courses.html',
 				controller: 'course-ctrl'
+			})
+			.when('/subjects', {
+				templateUrl: 'views/subjects.html',
+				controller: 'subjects-ctrl'
 			})			
 			.otherwise({
-				redirectTo: '/students'
+				redirectTo: '/login'
 			});
 		}])
 
